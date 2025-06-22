@@ -1,14 +1,8 @@
-const openBtn = document.getElementById('openModalBtn');
-        const closeBtn = document.getElementById('closeModalBtn');
-        const modal = document.getElementById('modal');
-        const overlay = document.getElementById('overlay');
-        
-        openBtn.addEventListener('click', function() {
-            modal.style.display = 'block';
-            overlay.style.display = 'block';
-        });
-        
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
+const lights = ['red', 'yellow', 'green'];
+        let currentLight = 0;
+        const switchBtn = document.getElementById('switchBtn');
+        switchBtn.addEventListener('click', function() {
+            document.getElementById(lights[currentLight]).classList.remove('active');
+            currentLight = (currentLight + 1) % lights.length;
+            document.getElementById(lights[currentLight]).classList.add('active');
         });
