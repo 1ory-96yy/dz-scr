@@ -5,19 +5,33 @@
   <title>Вхід</title>
   <script src="main.js" defer></script>
   <style>
-   body {
+        body {
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        input {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-  </style>
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        li.selected {
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
-  <h2>Введіть ваше ім'я (без цифр):</h2>
-    <input type="text" id="usernameInput" placeholder="Ваше ім'я">
+  <h2>Список книг:</h2>
+    <ul id="bookList">
+        <li>Гаррі Поттер і філософський камінь</li>
+        <li>Володар перснів</li>
+        <li>Майстер і Маргарита</li>
+        <li>1984</li>
+        <li>Гра престолів</li>
+    </ul>
 </body>
 </html>
